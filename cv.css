@@ -1,0 +1,400 @@
+body {
+    max-width: 100vw;
+    margin: 0;
+    background: url(content/pexels-bruno-thethe-1910236.jpg) no-repeat;
+    background-size: cover;
+    font-family: 'saudagar';
+    
+}
+
+@font-face {
+    font-family: 'saudagar';
+    src: url(content/Saudagar.ttf);
+}
+
+.contact{
+    float: left;
+    width: 30vw;
+    margin: 10px;
+    color: whitesmoke;
+    visibility: hidden;
+}
+
+.contact p{
+    margin: 10px;
+    padding-left: 50px;
+}
+
+.contact i{
+    margin-left: 30px;
+    float: left;
+}
+
+@keyframes contactAnimation {
+    from {
+        transform: translateX(10vw);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+.reseau{
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 300px;
+    height: 50px;
+    margin-left: 75vw;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    color:white
+}
+
+.reseau i {
+    scale: 2;
+    margin: 5px;
+}
+/*=================*/
+
+
+.title {
+    width: fit-content;
+    margin: auto;
+    font-family: 'saudagar';
+    margin-top: 200px;
+    color: whitesmoke;
+    animation: title 4s;
+}
+
+@keyframes title {
+    from {
+        opacity: 0.01;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h1 {   
+    font-size: 50px;
+}
+
+.title h3 {   
+    font-size: 80px;
+    opacity: 1;
+    transition: 1s;
+}
+
+.title h3:hover{
+    opacity: 0.5;
+}
+
+.test{
+    height: 2000px;
+}
+
+/*============== classe pour JS ================*/
+
+.reveal-left {
+    opacity: 0;
+}
+
+.reveal-l-visible {
+    opacity: 1;
+    transform: translateX(700px);
+    transition: 1.5s;
+}
+
+.reveal-right {
+    opacity: 0;
+}
+
+.reveal-r-visible {
+    opacity: 1;
+    transform: translateX(-900px);
+    transition: 1.5s;
+}
+
+/*============ Experience PRO ==============*/
+
+.experience{
+    margin-top: 300px;
+    color: whitesmoke;
+    cursor: pointer;
+    
+}
+
+.experience li {
+    padding-top: 0px;
+}
+
+.experience ul {
+    margin-top: 80px;
+}
+
+#paraV {
+    opacity: 1;
+}
+
+.experience li p{
+    animation: expReveal 1.5s;
+}
+
+@keyframes expReveal {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {opacity: 1;
+        transform: translateX(0px);    
+    }
+}
+
+h2 {
+    font-size: 40px;
+    border: 1px solid rgb(37, 194, 215);
+    border-radius: 15px;
+    width: fit-content;
+    padding: 0px 15px;
+    box-shadow: 0px -10px 30px rgba(243, 238, 238, 0.37);
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+    color: whitesmoke
+}
+
+ul li {
+    padding: 20px;
+    padding-left: 0;
+}
+
+.diplome {
+    width: fit-content;
+    margin-top: -150px;
+    color: whitesmoke;
+    margin-left:70pc;
+}
+
+.diplome-reveal {
+    
+    width: 600px;
+    height: 350px;
+    transform: translate(700px, 250px);
+    opacity: 0;
+    transition: all 1.5s;
+}
+
+.baccalaureat {
+    width: auto;
+    height:350px;
+    border-radius: 5px;
+}
+
+.competence{
+    width: fit-content;
+    color: whitesmoke;
+    margin-left: 200px;
+    margin-top: 200px;
+}
+
+.competence ul {
+    text-align: center;
+}
+
+/* ========= deuxieme partie =======*/
+
+.interest {
+    color: rgb(255, 255, 255);
+    margin-left: 100px;
+    margin-top: 200px;
+    width: 30vw;
+    float: left;
+    align-items: center;
+}
+
+.interest li {
+    cursor: pointer;
+    width: fit-content;
+    margin: auto;
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 40px;
+    text-align:center;
+}
+
+.interest-reveal {
+    position: relative;
+    width: 900px;
+    height: 400px;
+    margin-top: 250px;
+    margin-left: 35vw;
+    color: whitesmoke;
+    
+}
+
+.interest-reveal img {
+    height: 150px;
+    width: auto;
+    margin-left: 30px;
+    float: left;
+}
+
+.sport {
+    position: absolute;
+    top:50px;
+    left: 50px;
+    width: 50vw;
+    padding: 30px;
+    opacity: 0;
+    padding: 20px;
+    transition: opacity 0.5s;
+}
+
+.sport p {
+    margin-top: 40px;
+    margin-left: 200px;
+}
+
+.techno {
+   position: absolute;
+   left: 50px;
+   top:120px;
+   opacity: 0;
+   transition: opacity 0.5s;
+}
+
+.voyage {
+    position: absolute;
+    left: 50px;
+    top: 130px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.voyage p {
+    margin-left: 270px;
+}
+
+
+.langue {
+    color: whitesmoke;
+    width: 90vw;
+    margin: auto;
+    margin-top: 15vh;
+    
+}
+
+.langue h2 {
+    border: 0px;
+    display: block;
+    width: 20vw;
+    margin: auto;
+    font-size: 3vw;
+    text-align: center;
+}
+
+.langue div {
+    padding: 10px;
+    font-size: 1.2vw;
+}
+
+.langue .francais {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.langue .anglais {
+    display: flex;
+    justify-content:space-around;
+}
+
+.langue .espagnol {
+    display: flex;
+    justify-content: space-around;
+}
+
+.langue .loader {
+    border: 10px solid rgb(11, 8, 8);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; 
+    animation: loaderLangue2 forwards 5s ;
+}  
+
+.langue .loader.loader1 {
+    animation: loaderLangue forwards 5s ;
+}
+
+.langue .loader p{
+    transform: rotate(-45deg);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 5px;
+    margin-top: 8px;
+}
+
+.langue .loader1 p{
+    margin-left: 0px;
+}
+
+
+@keyframes loaderLangue {
+    0% {
+        opacity: 0.8;
+    }
+    20%{
+        border-top-color: aqua;
+    }
+    45%{
+        border-right-color: aqua;
+    }
+    70%{
+        border-bottom-color:aqua
+    }
+    100% {
+        border-bottom-color: aqua;
+        border-top-color:aqua ; 
+        border-right-color:aqua;
+        border-left-color:aqua ;
+        transform: rotate(45deg);
+        opacity: 1; 
+    }
+}
+@keyframes loaderLangue2 {
+    0% {
+        
+    }
+    25%{
+        border-top-color: aqua;    
+    }
+    50%{
+        border-right-color: aqua;
+        ;
+    }
+    75%{
+        border-bottom-color:aqua;
+    }
+    100% {
+        border-bottom-color: aqua;
+        border-top-color:aqua ; 
+        border-right-color:aqua;
+        opacity: 1; 
+        transform: rotate(45deg);
+    }
+}
+
+footer {
+    height: 100vh;
+}

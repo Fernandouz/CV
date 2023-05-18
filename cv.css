@@ -67,7 +67,7 @@ body{
 
 #profil h2{
     font-size: 3vw;
-    margin-left: 15%;
+    margin-left: 20%;
     margin-bottom: 0;
     color: #ff3c78;
 }
@@ -99,7 +99,7 @@ body{
     text-align: end;
     font-size: 3vw;
     color:#ff3c78;
-    margin-bottom: 0;
+    margin-bottom: 5%;
     margin-right: 10%;
 }
 
@@ -114,12 +114,11 @@ canvas {
 }
 
 #formation {
-    margin-left: 5%;
     margin-top: 15%;
 }
 
 #formation h2 {
-    margin-left: 15%;
+    margin-left: 20%;
     font-size: 3vw;
     color:#ff3c78;
     margin-bottom: 5%;
@@ -212,14 +211,13 @@ canvas {
 
 #contact {
     margin-top: 15%;
-    margin-left: 10%;
     font-size: 1.8vw;
     text-align: center;
     margin-bottom: 20%;
 }
 
 #contact h2 {
-    margin-left: 15%;
+    margin-left: 20%;
     font-size: 3vw;
     color:#ff3c78;
     margin-bottom: 10%;
@@ -330,6 +328,7 @@ li {
     }
     #skills h2{
         font-size: 7vw;
+        margin-bottom: 5%;
     }
     #formation h2{
         font-size: 7vw;

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cv.css" />
+    <script src="app.js" defer></script>
+    <script src="tagcanvas.min.js" type="text/javascript"></script>
+    <title>Hugo Fernandez - CV</title>
+  </head>
+  <body>
+    <div id="blob"></div>
+    <div id="blur"></div>
+
+    <div id="nav">
+      <a href="#profil">Profil</a>
+      <a href="#skills">Compétences</a>
+      <a href="#formation">Formation</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="title">
+      <h1>Hugo Fernandez</h1>
+      <h2>Développeur Web</h2>
+    </div>
+
+    <div id="profil">
+      <h2 class="left">Profil</h2>
+      <div class="flex-profil">
+        <p>
+          Je suis un élève dynamique qui vient de terminer une formation en tant
+          que développeur web. Fort de mes compétences en technologies de base
+          du web telles que React, HTML, JavaScript et CSS, je suis maintenant
+          prêt à m'orienter vers un nouveau défi en tant que data analyst.
+          <br />
+          <br />
+          Ma passion pour l'apprentissage constant et mon désir de rester à jour
+          avec les dernières avancées technologiques font de moi un
+          professionnel motivé et curieux. Je suis constamment à la recherche de
+          nouvelles opportunités pour me former et développer mes compétences
+          dans le domaine de l'analyse de données.
+        </p>
+        <img src="photo3.png" alt="photo de profil" />
+      </div>
+    </div>
+
+    <div id="skills">
+      <h2 class="right">Compétences</h2>
+      <div id="myCanvasContainer">
+        <canvas width="1000" height="500" style="width: 60%" id="myCanvas">
+          <ul>
+            <li><a href="#skills">HTML</a></li>
+            <li><a href="#skills">CSS</a></li>
+            <li><a href="#skills">JavaScript</a></li>
+            <li><a href="#skills">React</a></li>
+            <li><a href="#skills">Nodes.js</a></li>
+            <li><a href="#skills">SQL</a></li>
+            <li><a href="#skills">NoSQL</a></li>
+            <li><a href="#skills">Gestion de projet agile</a></li>
+            <li><a href="#skills">SCRUM</a></li>
+            <li><a href="#skills">SEO</a></li>
+            <li><a href="#skills">Optimisation</a></li>
+            <li><a href="#skills">Kanban</a></li>
+            <li><a href="#skills">Veille technologique</a></li>
+          </ul>
+        </canvas>
+      </div>
+    </div>
+
+    <div id="formation">
+      <h2 class="left">Formation</h2>
+      <div class="formation-content">
+        <div class="form-card">
+          <h3>Ynov Toulouse Campus</h3>
+          <p>Bachelor 3 - IA et Data</p>
+          <p>2023-2024</p>
+        </div>
+        <div class="form-card">
+          <h3>OpenClassrooms</h3>
+          <p>BTS Developpeur web</p>
+          <p>2022-2023</p>
+        </div>
+        <div class="form-card">
+          <h3>Lycée Pierre Bourdieu</h3>
+          <p>Baccalauréat Série ES</p>
+          <p>2014-2015</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="portfolio">
+      <h2 class="right">Portfolio</h2>
+      <div class="caroussel">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                src="Booki.png"
+                alt="Booki"
+                style="width: 100%; height: 60%"
+              />
+            </div>
+            <div class="flip-card-back">
+              <h1>Booki</h1>
+              <p>HTML/CSS</p>
+              <p>
+                Créer un page web statique en HTML et CSS en respectant une
+                maquette.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                src="MM.png"
+                alt="MenuMaker"
+                style="width: 100%; height: 60%"
+              />
+            </div>
+            <div class="flip-card-back">
+              <h1>Gestion de projet</h1>
+              <p>Planifier le développement d’un site</p>
+              <p>
+                Initiation à la méthode de travail agile, SCRUM et à la veille
+                technologique. Création d’un tableau Kanban et d’une
+                présentation PowerPoint.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                class="cam"
+                src="camera.avif"
+                alt="Camera"
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <div class="flip-card-back">
+              <h1>Nina Carducci</h1>
+              <p>Debugg et optimisation d’un site</p>
+              <p>
+                Optimisation des performances avec Lighthouse et Wave. Mise en
+                place du SEO ( balises Meta, rérencement local) avec google Rich
+                Snippet.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="kasa.png" alt="Kasa" style="width: 100%; height: 60%" />
+            </div>
+            <div class="flip-card-back">
+              <h1>Kasa</h1>
+              <p>Création d’une application de location immobilière</p>
+              <p>
+                Création du frontend d’une application à l’aide du framework
+                React.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                src="VG.png"
+                alt="Vieux Grimoire"
+                style="width: 100%; height: 60%"
+              />
+            </div>
+            <div class="flip-card-back">
+              <h1>Mon Vieux Grimoire</h1>
+              <p>Backend d’un site de notation de livre</p>
+              <p>
+                Mise en place du backend en Node Js et Express. Création d’un
+                routeur et connexion à une base de donnée NoSQL (MongoDB).
+                Gestion des fichier avec multer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact">
+      <h2 class="left">Contact</h2>
+      <p>Email : fernandouz@icloud.com</p>
+      <p>Téléphone : 0636186036</p>
+      <p>Linkedin :</p>
+    </div>
+
+    <script type="text/javascript">
+      window.onload = function () {
+        try {
+          // TagCanvas.Start("myCanvas");
+          TagCanvas.textColour = "#ffffff";
+          TagCanvas.outlineMethod = "none";
+          TagCanvas.textFont = "Gill Sans";
+          TagCanvas.Start("myCanvas");
+        } catch (e) {
+          // something went wrong, hide the canvas container
+          document.getElementById("myCanvasContainer").style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
+<!--    
+<div class="skills-list">
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+  <li>React</li>
+  <li>Node.js</li>
+  <li>SQL</li>
+  <li>NoSQL</li>
+</div>
+
+-->

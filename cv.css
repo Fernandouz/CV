@@ -1,0 +1,349 @@
+body{
+    color:white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: black;
+    z-index: -3;
+    margin: 0;
+}
+
+
+
+#nav{
+    margin:0;
+    width: 50%;
+    font-size: 1.3vw;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+#nav a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin-right: 5%;
+    transition: 0.4s;
+    position: relative;
+}
+
+#nav a:after{
+    content: "";
+    position: absolute;
+    background-color: #ff3c78;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -6px;
+    transition: 0.4s;
+}
+
+#nav a:hover:after{
+    
+    width: 100%;
+}
+
+#nav a:hover{
+    transform: scale(1.3);
+}
+
+.title{
+    margin-left: 37%;
+    margin-top: 8%;
+    width: fit-content;
+    font-size: 3.3vw;
+    text-align: end;
+    margin-bottom: 10%;
+    transition: 0.8s;
+    z-index: 0;
+}
+
+.title:hover{
+    transform: scale(1.2);
+}
+
+#profil{
+    width: 100%;
+    margin: auto;
+}
+
+#profil h2{
+    font-size: 3vw;
+    margin-left: 15%;
+    margin-bottom: 0;
+    color: #ff3c78;
+}
+
+#profil p {
+    margin-top: 8%;
+    margin-left: 3%;
+    width: 75%;
+    font-size: 1.3vw;
+}
+
+#profil img {
+    width: 40%;
+    aspect-ratio: 2/2;
+}
+
+.flex-profil{
+    display: flex;
+    justify-content: space-between;
+}
+
+#skills{
+    text-align: center;
+    margin-right: 5%;
+    margin-top: 15%;
+}
+
+#skills h2{
+    text-align: end;
+    font-size: 3vw;
+    color:#ff3c78;
+    margin-bottom: 0;
+    margin-right: 10%;
+}
+
+.skills-list{
+    text-align: center;
+}
+
+canvas {
+    margin-left: 0;
+    color: white;
+    aspect-ratio: 12/5;
+}
+
+#formation {
+    margin-left: 5%;
+    margin-top: 15%;
+}
+
+#formation h2 {
+    margin-left: 15%;
+    font-size: 3vw;
+    color:#ff3c78;
+    margin-bottom: 5%;
+}
+
+#formation .formation-content {
+    margin: auto;
+    font-size: 1.6vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+#portfolio {
+    margin-top: 15%;
+}
+
+#portfolio h2 {
+    text-align: end;
+    font-size: 3vw;
+    color:#ff3c78;
+    margin-bottom: 5%;
+    margin-right: 20%;
+}
+
+.caroussel{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    padding: 2%;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 15%;
+    height: auto;
+    aspect-ratio: 1.1/1;
+    perspective: 1000px; 
+    border-radius: 5%;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 5%;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+  }
+
+  .flip-card-front img{
+    margin-top: 25%;
+    border-radius: 5%;
+  }
+
+  .flip-card-front .cam{
+    margin-top: 0;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: #ff3c7600;
+    color: white;
+    transform: rotateY(180deg);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3vw;
+  }
+
+#contact {
+    margin-top: 15%;
+    margin-left: 10%;
+    font-size: 1.8vw;
+    text-align: center;
+    margin-bottom: 20%;
+}
+
+#contact h2 {
+    margin-left: 15%;
+    font-size: 3vw;
+    color:#ff3c78;
+    margin-bottom: 10%;
+    text-align: start;
+}
+
+
+li {
+    list-style: none;
+    color: white;
+}
+
+#blob{
+    background-color: white;
+    height: 500px;
+    aspect-ratio: 1;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(
+        to right,
+        aquamarine,
+        mediumpurple
+    );
+    animation: rotate 20s infinite;
+    filter: blur(200px);
+    z-index: -3;
+}
+
+#blur{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -2;
+    backdrop-filter: blur(200px);
+}
+
+@keyframes rotate{
+    from {
+        rotate: 0deg;
+    }
+    50%{
+        scale: 1 1.5;
+    }
+    to {
+        rotate: 360deg;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #nav{
+        font-size: 4vw;
+        width: auto;
+    }
+    
+    .flex-profil{
+        flex-direction: column-reverse;
+    }
+
+    #profil img{
+        margin:auto
+    }
+
+    #profil p{
+        font-size: 3.5vw;
+        margin: auto;
+        margin-top: 5%;
+    }
+
+    #formation{
+        margin-left: 0;
+    }
+
+    #formation .formation-content{
+        flex-direction: column;
+    }
+
+    .form-card{
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        font-size: 4vw;
+    }
+
+    .caroussel{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .flip-card{
+        width: 50%;
+        margin-bottom: 2%;
+    }
+
+    .flip-card-back{
+        font-size: 2.9vw;
+    }
+
+    #contact {
+        font-size: 4vw;
+        text-align: center;
+    }
+    
+    #profil h2{
+        font-size: 7vw;
+    }
+    #skills h2{
+        font-size: 7vw;
+    }
+    #formation h2{
+        font-size: 7vw;
+    }
+    #portfolio h2{
+        font-size: 7vw;
+    }
+    #contact h2{
+        font-size: 7vw;
+        text-align: start;
+        margin-bottom: 15%;
+    }
+    
+    
+
+
+}

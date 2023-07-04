@@ -741,6 +741,9 @@ li {
     #contact .flex-contact{
         width: 90%;
     }
+    .flex-contact p{
+        width: 100%;
+    }
     .flex-contact:hover{
         font-size: 4vw;
     }

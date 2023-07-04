@@ -628,7 +628,7 @@ li {
     }
     .title h1{
         text-align: start;
-        font-size: 9vw;
+        font-size: 8vw;
         margin-left: 10%;
     }
      .title h2{
@@ -742,7 +742,7 @@ li {
         width: 90%;
     }
     .flex-contact p{
-        width: 100%;
+        display: block;
     }
     .flex-contact:hover{
         font-size: 4vw;

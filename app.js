@@ -90,3 +90,27 @@ window.addEventListener("scroll", (e) => {
     navBar.classList.remove("white-nav");
   }
 });
+
+// Chargement script Tilt uniquement sur desktop
+
+// Fonction pour vérifier si l'utilisateur est sur un dispositif mobile
+function isMobileDevice() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
+}
+
+// Fonction pour charger dynamiquement le script vanilla-tilt.js pour desktop
+function loadVanillaTiltScript() {
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "vanilla-tilt.js";
+  script.defer = true;
+  document.getElementById("vanillaTiltScriptPlaceholder").appendChild(script);
+}
+
+// Vérifiez si l'utilisateur est sur un dispositif mobile ou sur un ordinateur
+if (!isMobileDevice()) {
+  // Chargez le script vanilla-tilt.js uniquement pour desktop
+  loadVanillaTiltScript();
+}

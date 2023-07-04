@@ -613,7 +613,7 @@ li {
 
 @media screen and (max-width: 500px) {
     .nav{
-        font-size: 3.1vw;
+        font-size: 3vw;
         width: 100%;
         background: #ffffff;
         padding-bottom: 3%;

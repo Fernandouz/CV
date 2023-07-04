@@ -1,6 +1,11 @@
+@font-face {
+    font-family: 'montserrat';
+    src: url('Montserrat-VariableFont_wght.ttf');
+}
+
 body{
     color:white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'montserrat', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: black;
     z-index: -3;
     margin: 0;
@@ -8,15 +13,19 @@ body{
 
 
 
-#nav{
+.nav{
     margin:0;
-    width: 50%;
+    width: 100%;
     font-size: 1.3vw;
-    padding-top: 2%;
-    padding-left: 2%;
+    padding:2%;
+    position: fixed;
+    top: 0;
+    height: fit-content;
+    z-index: 30;
+    transition: 0.6s;
 }
 
-#nav a{
+.nav a{
     display: inline-block;
     color: white;
     text-decoration: none;
@@ -25,7 +34,7 @@ body{
     position: relative;
 }
 
-#nav a:after{
+.nav a:after{
     content: "";
     position: absolute;
     background-color: #ff3c78;
@@ -36,33 +45,71 @@ body{
     transition: 0.4s;
 }
 
-#nav a:hover:after{
+.nav a:hover:after{
     
     width: 100%;
 }
 
-#nav a:hover{
+.nav a:hover{
     transform: scale(1.3);
+}
+
+.white-nav{
+    background: #fffffff9;
+    padding: 1%;
+}
+
+.white-nav a{
+    color:#ff3c78
 }
 
 .title{
     margin-left: 37%;
-    margin-top: 8%;
+    padding-top: 8%;
     width: fit-content;
     font-size: 3.3vw;
     text-align: end;
-    margin-bottom: 10%;
-    transition: 0.8s;
+    margin-bottom: 5%;
     z-index: 0;
 }
 
-.title:hover{
+.title h1{
+    transition: 0.8s;
+}
+
+.title h2{
+    text-align: start;
+    width: 83.2%;
+    font-size: 5vw;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    border-right: 2px solid #ff3c78;
+    animation: typing 3s steps(40, end),
+        blink-caret .75s step-end infinite;
+    transform: translateX(10%);
+    transition: 0.8s;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 83.4% }
+  }
+  
+  
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #ff3c78; }
+  }
+
+.title h1:hover, .title h2:hover{
     transform: scale(1.2);
 }
 
 #profil{
     width: 100%;
     margin: auto;
+    padding-top: 8%;
 }
 
 #profil h2{
@@ -70,13 +117,14 @@ body{
     margin-left: 20%;
     margin-bottom: 0;
     color: #ff3c78;
+    text-transform: uppercase;
 }
 
 #profil p {
     margin-top: 8%;
     margin-left: 3%;
     width: 75%;
-    font-size: 1.3vw;
+    font-size: 1.5vw;
 }
 
 #profil img {
@@ -92,7 +140,8 @@ body{
 #skills{
     text-align: center;
     margin-right: 5%;
-    margin-top: 15%;
+    margin-top: 5%;
+    padding-top: 5%;
 }
 
 #skills h2{
@@ -101,6 +150,7 @@ body{
     color:#ff3c78;
     margin-bottom: 5%;
     margin-right: 10%;
+    text-transform: uppercase;
 }
 
 .skills-list{
@@ -110,72 +160,227 @@ body{
 canvas {
     margin-left: 0;
     color: white;
-    aspect-ratio: 12/5;
+    aspect-ratio: 12/7;
 }
 
 #formation {
-    margin-top: 15%;
+    margin-top: 5%;
+    padding-top: 5%;
 }
 
 #formation h2 {
     margin-left: 20%;
     font-size: 3vw;
     color:#ff3c78;
-    margin-bottom: 5%;
+    margin-bottom: 8%;
+    text-transform: uppercase;
 }
 
-#formation .formation-content {
+.formation-content {
     margin: auto;
-    font-size: 1.6vw;
+    font-size: 1.4vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
 }
+
+.form-card{
+    position: relative;
+    transition: 0.5s;
+    width: 32%;
+    aspect-ratio: 1.8/1;
+}
+
+.form-card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:20%;
+    width: 50%;
+    height: 100%;
+    background-color: #FFF;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+}
+
+.form-card::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:15%;
+    width: 50%;
+    height: 100%;
+    background-color: #FFF;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+    filter: blur(30px);
+    transition: 0.5s;
+}
+
+.form-card:hover::before, .form-card:hover::after{
+    transform: skewX(0deg);
+    left:10%;
+    width: 70%;
+}
+
+.form-card::before, .form-card::after{
+    background: linear-gradient(150deg, #ff3c78,#220497);
+}
+
+.form-card span{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    pointer-events: none;
+}
+
+.form-card span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.5s;
+    animation: animate 2s ease-in-out infinite;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-card:hover span::before{
+    top: -50px;
+    left: 50px;
+    width: 20%;
+    height: 35%;
+    opacity: 1;
+}
+
+.form-card span::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.5s;
+    animation: animate 2s ease-in-out infinite;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+    animation-delay: -1s;
+}
+
+.form-card:hover span::after{
+    bottom: -50px;
+    right: 50px;
+    width: 20%;
+    height: 35%;
+    opacity: 1;
+}
+
+@keyframes animate {
+    0%,100%{
+        transform: translateY(10px);
+    } 
+    50%{
+        transform: translateY(-10px);
+    }
+    
+}
+
+.form-card .content {
+    z-index: 10;
+    margin: auto;
+    margin-top: 8%;
+    width: 70%;
+    padding: 1% 1%;
+    text-align: center;
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    backdrop-filter: blur(15px);
+    transform: 0.5s;
+    transition: 0.5s;
+}
+
+.form-card .content:hover{
+    transform: translateX(-15px);
+    margin-top: 4%;
+    padding: 4% 4%;
+    font-size: 1.5vw;
+}
+
+.form-card .content p{
+    position: relative;
+    z-index: 1;
+}
+
+.form-card h3{
+    position: relative;
+    z-index: 1;
+}
+
 
 #portfolio {
-    margin-top: 15%;
+    margin-top: 6%;
+    padding-top: 5%;
 }
 
 #portfolio h2 {
     text-align: end;
-    font-size: 3vw;
+    font-size: 3.5vw;
     color:#ff3c78;
     margin-bottom: 5%;
     margin-right: 20%;
+    text-transform: uppercase;
 }
 
 .caroussel{
     display: flex;
     justify-content: space-between;
-    margin-top: 5%;
+    flex-wrap: wrap;
+    margin-top: 1%;
     padding: 2%;
 }
 
 .flip-card {
     background-color: transparent;
-    width: 15%;
+    width: 26%;
     height: auto;
     aspect-ratio: 1.1/1;
     perspective: 1000px; 
     border-radius: 5%;
+    margin-top: 3%;
   }
   
-  /* This container is needed to position the front and back side */
+  
   .flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.8s;
+    transition: transform 1.8s;
     transform-style: preserve-3d;
     
   }
   
-  /* Do an horizontal flip when you move the mouse over the flip box container */
+  
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
   
-  /* Position the front and back side */
   .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
@@ -185,43 +390,180 @@ canvas {
     border-radius: 5%;
   }
   
-  /* Style the front side (fallback if image is missing) */
   .flip-card-front {
     background-color: rgba(255, 255, 255, 0);
     color: black;
   }
 
   .flip-card-front img{
-    margin-top: 25%;
+    margin-top: 15%;
     border-radius: 5%;
+    
   }
 
   .flip-card-front .cam{
     margin-top: 0;
+    object-fit:cover;
+    aspect-ratio: 30/16;
   }
   
-  /* Style the back side */
   .flip-card-back {
-    background-color: #ff3c7600;
+    background-color:rgba(203, 196, 196, 0.1);
+    /*box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);*/
+    box-shadow:0px 5px 15px #ff3c768d;
     color: white;
     transform: rotateY(180deg);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'montserrat', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.1vw;
+    margin-top: 5%;
+    height: 90%;
+    padding-top: 15%;
+  }
+
+  #portfolio a {
+    color: #ff3c78;
+    margin-left: 5%;
   }
 
 #contact {
-    margin-top: 15%;
+    margin-top: 5%;
+    padding-top: 5%;
     font-size: 1.8vw;
     text-align: center;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
 }
 
 #contact h2 {
     margin-left: 20%;
     font-size: 3vw;
     color:#ff3c78;
-    margin-bottom: 10%;
+    margin-bottom: 8%;
     text-align: start;
+    text-transform: uppercase;
+}
+
+#contact a {
+    color: #ff3c78;
+    text-decoration: none;
+}
+
+.flex-contact {
+    margin: auto;
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:37%;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    backdrop-filter: blur(15px);
+    padding: 1%;
+    transition: 0.6s;
+    position: relative;
+}
+
+.flex-contact:hover{
+    padding: 3%;
+    font-size: 2vw;
+    box-shadow:1px 1px 15px #ff3c768d;
+}
+
+.flex-contact p {
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: appear 2.5s forwards;
+    display: none;
+    margin: 0 auto;
+    
+}
+
+.icon{
+    width: 8%;
+    margin-right: 5%;
+    background-color: white;
+    padding: 0.5%;
+    border-radius: 50%;
+    transition: 0.9s;
+}
+
+.icon i{
+    transition: 0.9s;
+}
+
+@keyframes appear {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+.flex-contact span{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.flex-contact span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.6s;
+    animation: animate 2s ease-in-out infinite;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.flex-contact:hover span::before{
+    top: -30px;
+    left: 50px;
+    width: 20%;
+    height: 40%;
+    opacity: 1;
+    background: linear-gradient(150deg,#183baebe, #ff3c769f);
+    box-shadow:1px 1px 15px #ff3c768d;
+}
+
+.flex-contact span::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.6s;
+    animation: animate 2s ease-in-out infinite;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+    animation-delay: -1s;
+}
+
+.flex-contact:hover span::after{
+    bottom: -40px;
+    right: 50px;
+    width: 20%;
+    height: 40%;
+    opacity: 1;
+    background: linear-gradient(150deg, #ff3c769f,#183baebe);
+    box-shadow:1px 1px 15px #ff3c768d;
 }
 
 
@@ -270,9 +612,28 @@ li {
 }
 
 @media screen and (max-width: 500px) {
-    #nav{
-        font-size: 4vw;
-        width: auto;
+    .nav{
+        font-size: 3.1vw;
+        width: 100%;
+        background: #ffffff;
+        padding-bottom: 3%;
+    }
+    .nav a {
+        color: #ff3c78;
+    }
+
+    .title{
+        margin-left: 5%;
+        width: 91%;
+    }
+    .title h1{
+        text-align: start;
+        font-size: 9.3vw;
+        margin-left: 10%;
+    }
+     .title h2{
+        font-size: 8vw;
+
     }
     
     .flex-profil{
@@ -280,7 +641,8 @@ li {
     }
 
     #profil img{
-        margin:auto
+        margin:auto;
+        width: 70%;
     }
 
     #profil p{
@@ -301,6 +663,18 @@ li {
         width: 50%;
         margin: auto;
         text-align: center;
+        font-size: 3.6vw;
+        margin-top: 10%;
+        width: 50vw;
+        height: 45vh;
+    }
+
+    .form-card .content{
+        width: 80%;
+        aspect-ratio: 1.3/1;
+    }
+
+    .form-card .content:hover{
         font-size: 4vw;
     }
 
@@ -310,12 +684,30 @@ li {
         align-items: center;
     }
     .flip-card{
-        width: 50%;
-        margin-bottom: 2%;
+        width: 55%;
+        margin-bottom: 3%;
+    }
+
+    .flip-card-front img{
+        margin-top: 0;
+    }
+
+    .flip-card:nth-child(4){
+        margin-top: 20%;
+    }
+    .flip-card:nth-child(6){
+        margin-top: 20%;
     }
 
     .flip-card-back{
+        margin-top: 3%;
         font-size: 2.9vw;
+        height: auto;
+        padding-top: 0%;
+    }
+
+    .flip-card-back:nth-child(2){
+        margin-top: -10%;
     }
 
     #contact {
@@ -325,6 +717,8 @@ li {
     
     #profil h2{
         font-size: 7vw;
+        margin-bottom: 10%;
+        margin-top: 5%;
     }
     #skills h2{
         font-size: 7vw;
@@ -335,14 +729,26 @@ li {
     }
     #portfolio h2{
         font-size: 7vw;
+        margin-top: 10%;
+        margin-bottom: 10%;
     }
     #contact h2{
         font-size: 7vw;
         text-align: start;
         margin-bottom: 15%;
+        margin-top: 10%;
     }
-    
-    
-
+    #contact .flex-contact{
+        width: 90%;
+    }
+    .flex-contact:hover{
+        font-size: 4vw;
+    }
+    .flex-contact:hover span::before{
+        top: -20px;
+    }
+    .flex-contact:hover span::after{
+        bottom: -20px;
+    }
 
 }

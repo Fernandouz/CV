@@ -30,7 +30,6 @@ const observer = new IntersectionObserver((entries) => {
         ],
         { duration: 1500 }
       );
-      //observer.disconnect(entry.target);
     }
     if (entry.target.className == "left") {
       entry.target.animate(
@@ -50,11 +49,44 @@ observer.observe(document.querySelector("#formation h2"));
 observer.observe(document.querySelector("#portfolio h2"));
 observer.observe(document.querySelector("#contact h2"));
 
-/*
-if (entry.className == "right") {
-      console.log("right");
-    }
-    if (entry.className == "left") {
-      console.log("left");
-    }
-*/
+// Partie contact
+
+const flexContacts = document.querySelectorAll(".flex-contact");
+
+flexContacts.forEach((contact) => {
+  const text = contact.querySelector(" p");
+  const icon = contact.querySelector(".icon");
+  const logo = contact.querySelector(".icon i");
+
+  icon.addEventListener("mouseenter", () => {
+    icon.animate(
+      [
+        { transform: "scale(1)" },
+        { transform: "scale(1.5)" },
+        { transform: "scale(1)" },
+      ],
+      {
+        duration: 1000,
+      }
+    );
+    logo.animate(
+      [{ transform: "rotate(0deg)" }, { transform: "rotate(360deg)" }],
+      {
+        duration: 700,
+      }
+    );
+    text.style.display = "block";
+  });
+});
+
+// Navigation
+
+window.addEventListener("scroll", (e) => {
+  const navBar = document.querySelector(".nav");
+  if (scrollY > 550) {
+    navBar.classList.add("white-nav");
+  }
+  if (scrollY < 550) {
+    navBar.classList.remove("white-nav");
+  }
+});

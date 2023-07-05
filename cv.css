@@ -643,6 +643,7 @@ li {
         font-size: 7.3vw;
         width: 72%;
         animation: animeMobile 3s steps(40, end);
+        margin-left: 0;
     }
 
     @keyframes animeMobile{

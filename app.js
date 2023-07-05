@@ -1,18 +1,3 @@
-// animation souris
-const blob = document.getElementById("blob");
-
-document.body.onpointermove = (event) => {
-  const { clientX, clientY } = event;
-
-  blob.animate(
-    {
-      left: `${clientX}px`,
-      top: `${clientY}px`,
-    },
-    { duration: 3000, fill: "forwards" }
-  );
-};
-
 // animation title
 const observer = new IntersectionObserver((entries) => {
   for (const entry of entries) {
@@ -113,4 +98,19 @@ function loadVanillaTiltScript() {
 if (!isMobileDevice()) {
   // Chargez le script vanilla-tilt.js uniquement pour desktop
   loadVanillaTiltScript();
+
+  // animation souris
+  const blob = document.getElementById("blob");
+
+  document.body.onpointermove = (event) => {
+    const { clientX, clientY } = event;
+
+    blob.animate(
+      {
+        left: `${clientX}px`,
+        top: `${clientY}px`,
+      },
+      { duration: 3000, fill: "forwards" }
+    );
+  };
 }

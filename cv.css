@@ -631,19 +631,20 @@ li {
     }
 
     .title{
-        margin-left: 5%;
+        margin-left: 3%;
         width: 100%;
     }
     .title h1{
         text-align: start;
         font-size: 8vw;
-        margin-left: 10%;
+        margin-left: 0%;
     }
      .title h2{
         font-size: 7.3vw;
         width: 72%;
         animation: animeMobile 3s steps(40, end);
-        margin-left: 0;
+        transform: translateY(0);
+        margin: 0;
     }
 
     @keyframes animeMobile{
@@ -680,18 +681,20 @@ li {
     .form-card{
         width: 50%;
         margin: auto;
-        margin-top: 5%;
+        margin-top: 0;
         text-align: center;
         font-size: 3.6vw;
         margin-top: 10%;
         width: 50vw;
-        height: 25vh;
+        height: 35vh;
     }
 
     .form-card .content{
         width: 80%;
         aspect-ratio: 1.3/1;
         font-size: 3vw;
+        margin-bottom: 3%;
+        margin-top: 3%;
     }
 
     .form-card .content:hover{
@@ -700,11 +703,13 @@ li {
 
     .form-card:hover span::before{
         height: 20%;
-        top:5px;
+        top:-15px;
+        left: 10%;
     }
     .form-card:hover span::after{
         height: 20%;
-        bottom: 5px;
+        bottom: -20px;
+        right: 15%;
     }
 
     .caroussel{

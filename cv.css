@@ -620,14 +620,34 @@ li {
 }
 
 @media screen and (max-width: 500px) {
+    body{
+        background: linear-gradient(50deg, black, rgba(35, 35, 35, 0.914));
+        width: 100vw;
+    }
+
+    #blob{
+        display: none;
+    }
+    #blur{
+        display: none;
+    }
+
     .nav{
         font-size: 3vw;
-        width: 100%;
+        width: 100vw;
         background: #ffffff;
+        padding-right: 0;
+        padding-left: 0;
+        padding-top: 3%;
         padding-bottom: 3%;
+        
     }
     .nav a {
         color: #ff3c78;
+    }
+
+    .nav a:nth-child(1){
+        margin-left: 2%;
     }
 
     .title{
@@ -636,13 +656,13 @@ li {
     }
     .title h1{
         text-align: start;
-        font-size: 8vw;
+        font-size: 8.9vw;
         margin-left: 0%;
     }
      .title h2{
-        font-size: 7.3vw;
+        font-size: 7.6vw;
         width: 72%;
-        animation: animeMobile 3s steps(40, end);
+        animation: animeMobile 3s steps(40, end) forwards;
         transform: translateY(0);
         margin: 0;
     }
@@ -651,7 +671,7 @@ li {
         from{
             width: 0;
         }to{
-            width: 72%;
+            width: 75%;
         }
     }
     
@@ -661,7 +681,8 @@ li {
 
     #profil img{
         margin:auto;
-        width: 70%;
+        width: 69%;
+        margin-bottom: 5%;
     }
 
     #profil p{
@@ -686,7 +707,7 @@ li {
         font-size: 3.6vw;
         margin-top: 10%;
         width: 50vw;
-        height: 35vh;
+        height: 32vh;
     }
 
     .form-card .content{
@@ -699,6 +720,7 @@ li {
 
     .form-card .content:hover{
         font-size: 3.5vw;
+        padding: 3% 3%;
     }
 
     .form-card:hover span::before{

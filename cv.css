@@ -641,7 +641,16 @@ li {
     }
      .title h2{
         font-size: 7.3vw;
-        width: 70%;
+        width: 72%;
+        animation: animeMobile 3s steps(40, end);
+    }
+
+    @keyframes animeMobile{
+        from{
+            width: 0;
+        }to{
+            width: 72%;
+        }
     }
     
     .flex-profil{
@@ -690,11 +699,11 @@ li {
 
     .form-card:hover span::before{
         height: 20%;
-        top:0
+        top:5px;
     }
     .form-card:hover span::after{
         height: 20%;
-        bottom: 0;
+        bottom: 5px;
     }
 
     .caroussel{
